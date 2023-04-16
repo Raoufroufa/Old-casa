@@ -54,6 +54,8 @@ async function getProperty (req, res) {
 };
 
 
+
+
 module.exports = {
     getAllProperties,
     getProperty

@@ -2,7 +2,7 @@ const mongoose = require ('mongoose');
 const Schema = mongoose.Schema;
 
 // create user Schema & model 
-const UserSchema = new Schema({
+const PropertySchema = new Schema({
     type: {
       type: String,
       required: true,
@@ -26,9 +26,17 @@ const UserSchema = new Schema({
     price: {
       type: Number,
       required: true,
+    },
+    equipped: {
+        type: Boolean,
+        required: true,
+    },
+    description: {
+      type: String,
+      required: true,
     }
-});
+  });
 
-const Property = mongoose.model('property', UserSchema);
+const Property = mongoose.model('property', PropertySchema);
 
 module.exports = Property;
