@@ -4,6 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require("ejs");
 const mongoose = require('mongoose');
+const cors = require("cors");
 
 const apiRouter = require('./routes/api');
 const authRouter = require('./routes/auth');
@@ -13,6 +14,7 @@ const authMiddleware = require('./middlewhares/auth');
 
 const app = express();
 
+app.use(cors());
 app.set('view engine', 'ejs');
 mongoose.set('strictQuery', true);
 
